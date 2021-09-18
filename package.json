@@ -15,7 +15,7 @@
   "license": "MIT",
   "name": "pem-elliptic-curve",
   "description": "Create private keys and certificates with node.js and io.js. Modified to support elliptic curve.",
-  "version": "1.14.5",
+  "version": "1.14.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/thepenguinmaster/pem"

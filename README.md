@@ -3,6 +3,8 @@ pem
 
 Create private keys and certificates with node.js
 
+Forked and modified to support certiifcates with elliptic curve keys
+
 [![Build Status](https://secure.travis-ci.org/Dexus/pem.png)](http://travis-ci.org/Dexus/pem) [![npm version](https://badge.fury.io/js/pem.svg)](http://badge.fury.io/js/pem) [![npm downloads](https://img.shields.io/npm/dt/pem.svg)](https://www.npmjs.com/package/pem) [![pem documentation](https://img.shields.io/badge/pem-documentation-0099ff.svg?style=flat)](https://dexus.github.io/pem/jsdoc/) [![Greenkeeper badge](https://badges.greenkeeper.io/Dexus/pem.svg)](https://greenkeeper.io/)
 
 
@@ -12,7 +14,7 @@ Create private keys and certificates with node.js
 
 Install with npm
 
-    npm install pem
+    npm install pem-elliptic-curve
 
 ## Examples
 
@@ -21,7 +23,7 @@ Here are some examples for creating an SSL key/cert on the fly, and running an H
 ### Basic https
 ```javascript
 var https = require('https')
-var pem = require('pem')
+var pem = require('pem-elliptic-curve')
 
 pem.createCertificate({ days: 1, selfSigned: true }, function (err, keys) {
   if (err) {
@@ -36,7 +38,7 @@ pem.createCertificate({ days: 1, selfSigned: true }, function (err, keys) {
 ###  Express
 ```javascript
 var https = require('https')
-var pem = require('pem')
+var pem = require('pem-elliptic-curve')
 var express = require('express')
 
 pem.createCertificate({ days: 1, selfSigned: true }, function (err, keys) {
@@ -316,7 +318,7 @@ Note that `createCertificate` and `createCSR` supports the `altNames` option whi
 In some systems the `openssl` executable might not be available by the default name or it is not included in $PATH. In this case you can define the location of the executable yourself as a one time action after you have loaded the pem module:
 
 ```javascript
-var pem = require('pem')
+var pem = require('pem-elliptic-curve')
 pem.config({
   pathOpenSSL: '/usr/local/bin/openssl'
 })

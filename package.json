@@ -5,15 +5,20 @@
       "name": "Josef Fröhle",
       "email": "github@josef-froehle.de",
       "url": "https://www.josef-froehle.de/"
+    },
+    {
+      "name": "Robert Lisiecki",
+      "email": "npm@lisiecki.com",
+      "url": "https://www.lisiecki.com/"
     }
   ],
   "license": "MIT",
-  "name": "pem",
-  "description": "Create private keys and certificates with node.js and io.js",
-  "version": "1.14.4",
+  "name": "pem-elliptic-curve",
+  "description": "Create private keys and certificates with node.js and io.js. Modified to support elliptic curve.",
+  "version": "1.14.5",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dexus/pem.git"
+    "url": "https://github.com/thepenguinmaster/pem"
   },
   "main": "lib/pem",
   "scripts": {
